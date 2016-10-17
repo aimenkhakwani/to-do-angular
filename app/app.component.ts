@@ -5,7 +5,7 @@ import { Component } from '@angular/core';
   template: `
   <div class="container">
     <h1>My First Angular 2 App</h1>
-    <h3 *ngFor="let currentTask of tasks">{{ currentTask.description }}</h3>
+    <h3 (click)="doStuff(currentTask)" *ngFor="let currentTask of tasks">{{ currentTask.description }}</h3>
   </div>
   `
 })
@@ -17,6 +17,13 @@ export class AppComponent {
     new Task("Rewatch LotR", 2),
     new Task("Do laundry", 3)
   ];
+  doStuff(clickedTask: Task) {
+    if(clickedTask.done === true) {
+      alert("This task is complete");
+    } else {
+      alert("This task in NOT complete");
+    }
+  }
 }
 
 export class Task {
