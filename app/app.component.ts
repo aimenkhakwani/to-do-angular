@@ -7,19 +7,17 @@ import { Task } from './task.model';
   <div class="container">
     <h1>My First Angular 2 App</h1>
     <pies></pies>
-    <new-task
-      (newTaskSender)="addTask($event)"
-    ></new-task>
     <task-list
       [childTaskList]="masterTaskList"
       (clickSender)="showDetails($event)"
      ></task-list>
-  </div>
-  <div class="container">
-    <edit-task
-      [childSelectedTask]="selectedTask"
-      (doneClickedSender)="finishedEditing()"
-    ></edit-task>
+     <edit-task
+       [childSelectedTask]="selectedTask"
+       (doneClickedSender)="finishedEditing()"
+     ></edit-task>
+    <new-task
+      (newTaskSender)="addTask($event)"
+    ></new-task>
   </div>
   `
 })

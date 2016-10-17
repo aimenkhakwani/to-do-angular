@@ -9,23 +9,12 @@ h1, h2{
   text-align: center;
   padding: 15px;
 }
-.pies {
+.pies, .new-task, .edit-task {
   border: 1px solid #bfbfbf;
   padding: 20px;
   border-radius: 20px;
   margin: 50px;
   box-shadow: 3px 3px 3px #a9a9a9;
-}
-.new-task{
-  width: 400px;
-  border: 1px solid #bfbfbf;
-  padding: 20px;
-  border-radius: 20px;
-  margin-left: 30%;
-  box-shadow: 3px 3px 3px #a9a9a9;
-}
-.edit-task {
-  padding: 20px;
 }
 .task-list {
   background-color: #fff4b3;

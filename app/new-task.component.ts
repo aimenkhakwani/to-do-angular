@@ -4,7 +4,7 @@ import { Task } from './task.model';
 @Component({
   selector: 'new-task',
   template:`
-    <div class="col-md-6 new-task">
+    <div class="new-task">
       <h3 class="center">Add New Task</h3>
       <div>
         <label>Enter Task Description</label>
