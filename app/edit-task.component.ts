@@ -4,16 +4,20 @@ import { Task } from './task.model';
 @Component({
   selector: 'edit-task',
   template: `
-    <div *ngIf="childSelectedTask">
-      <h1>Edit Task</h1>
-      <div>
-        <label>Enter Task Description:</label>
-        <input [(ngModel)]="childSelectedTask.description">
-      </div>
-      <div>
-        <label>Enter Task ID:</label>
-        <input [(ngModel)]="childSelectedTask.id">
-        <button (click)="doneClicked()">Done</button>
+    <div class="edit-task">
+      <div *ngIf="childSelectedTask">
+        <h1>Edit Task</h1>
+        <div>
+          <label>Enter Task Description:</label>
+          <input class="form-control" [(ngModel)]="childSelectedTask.description">
+        </div>
+        <br>
+        <div>
+          <label>Enter Task ID:</label>
+          <input class="form-control" [(ngModel)]="childSelectedTask.id">
+          <br>
+          <button class="btn btn-warning center-block" (click)="doneClicked()">Done</button>
+        </div>
       </div>
     </div>
   `

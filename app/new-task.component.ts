@@ -4,19 +4,22 @@ import { Task } from './task.model';
 @Component({
   selector: 'new-task',
   template:`
-    <h3>New Task</h3>
-    <div>
-      <label>Enter Task Description</label>
-      <input #newDescription>
-    </div>
-    <div>
-      <label>Enter Task ID</label>
-      <input #newId>
-      <button (click)="
-      addClicked(newDescription.value, newId.value);
-      newDescription.value='';
-      newId.value='';
-      ">Add</button>
+    <div class="col-md-6 new-task">
+      <h3 class="center">Add New Task</h3>
+      <div>
+        <label>Enter Task Description</label>
+        <input class="form-control" #newDescription>
+      </div>
+      <div>
+        <label>Enter Task ID</label>
+        <input class="form-control" #newId>
+        <br>
+        <button class="btn btn-danger center-block" (click)="
+        addClicked(newDescription.value, newId.value);
+        newDescription.value='';
+        newId.value='';
+        ">Add</button>
+      </div>
     </div>
   `
 })

@@ -14,6 +14,8 @@ import { Task } from './task.model';
       [childTaskList]="masterTaskList"
       (clickSender)="showDetails($event)"
      ></task-list>
+  </div>
+  <div class="container">
     <edit-task
       [childSelectedTask]="selectedTask"
       (doneClickedSender)="finishedEditing()"
