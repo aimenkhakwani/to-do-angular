@@ -17,4 +17,5 @@ export class TaskComponent {
   toggleDone(setCompleteness: boolean) {
     this.task.done = setCompleteness;
   }
+  
 }
