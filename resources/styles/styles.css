@@ -7,8 +7,8 @@ h1, h2{
 }
 
 .option {
-  padding-top: 10px;
-  padding-bottom: 10px;
+  font-size: 18px;
+  padding: 1px;
 }
 
 .center {
@@ -33,4 +33,13 @@ h1, h2{
 .filter {
   margin-top: 20px;
   margin-bottom: 20px;
+}
+.edit-btn {
+  border: none;
+  background: transparent;
+  color: red;
+  font-size: 12px;
+  margin-top: -30px;
+  margin-bottom: 10px;
+  float: right;
 }

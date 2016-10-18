@@ -19,7 +19,7 @@ import { Task } from './task.model';
     </select>
     <div *ngFor="let currentTask of childTaskList | completeness:selectedCompleteness:selectedPriority">
       <task-display class="option" [task]="currentTask"></task-display>
-      <button class="btn btn-default" (click)="editButtonHasBeenClicked(currentTask)">Edit</button>
+      <button class="edit-btn"(click)="editButtonHasBeenClicked(currentTask)">(Edit)</button>
     </div>
     </div>
   `
@@ -28,7 +28,7 @@ import { Task } from './task.model';
 export class TaskListComponent {
   @Input() childTaskList: Task[];
   @Output() clickSender = new EventEmitter();
-  public selectedCompleteness: string = "notDone";
+  public selectedCompleteness: string = "all";
   public selectedPriority: string = "all";
 
   onChange(optionFromMenu) {

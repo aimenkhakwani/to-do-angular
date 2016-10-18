@@ -24,10 +24,12 @@ import { Task } from './task.model';
 
 export class AppComponent {
   public masterTaskList: Task[] = [
-      new Task("Create To-Do List app.", "high", 0),
-      new Task("Learn Kung Fu.", "medium", 1),
-      new Task("Rewatch all the Lord of the Rings movies.", "high", 2),
-      new Task("Do the laundry.", "low", 3)
+      new Task("Study Angular", "high", 0),
+      new Task("Walk the cat", "medium", 1),
+      new Task("Rewatch all the Lord of the Rings movies", "high", 2),
+      new Task("Do the laundry", "low", 3),
+      new Task("Grab a latte", "medium", 3),
+      new Task("Read Harry Potter", "high", 3)
   ];
   selectedTask: Task = null;
   showDetails(clickedTask: Task) {
