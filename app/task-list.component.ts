@@ -6,13 +6,13 @@ import { Task } from './task.model';
   template: `
     <div class="task-list">
     <h2>All Tasks</h2>
-    <select (change)="onChange($event.target.value)" class="form-control">
+    <select (change)="onChange($event.target.value)" class="form-control filter">
       <option value="all">Show All</option>
       <option value="isDone">Show Done</option>
       <option value="notDone" selected="selected">Show Not Done</option>
     </select>
       <div *ngFor="let currentTask of childTaskList | completeness:selectedCompleteness">
-        <h3>{{ currentTask.description }}</h3>
+        <task-display class="option" [task]="currentTask"></task-display>
         <button class="btn btn-default" (click)="editButtonHasBeenClicked(currentTask)">Edit</button>
       </div>
     </div>
